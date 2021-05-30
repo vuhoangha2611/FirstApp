@@ -1,0 +1,23 @@
+﻿@model FirstApp.Models.User
+@{
+    ViewBag.Title = "PostModel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PostModel</h2>
+@using (Html.BeginForm())
+{
+    <div>
+        <div>Username:
+            @Html.EditorFor(model => model.UserName)
+        </div>
+        <div>Password:
+            @Html.EditorFor(model => model.PassWord)
+        </div>
+        <div>Email:
+            @Html.EditorFor(model => model.Email)
+        </div>
+        <input type="submit" value="Login" />
+    </div>
+}
+
